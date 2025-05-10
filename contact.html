@@ -28,20 +28,33 @@
     .btn-custom:hover {
       background-color: #4ab8e0;
     }
+    .btn-whatsapp {
+      background-color: #25D366;
+      color: white;
+    }
+    .btn-whatsapp:hover {
+      background-color: #1ebe57;
+    }
+    .btn-whatsapp img {
+      vertical-align: middle;
+      margin-right: 8px;
+      width: 20px;
+      height: 20px;
+    }
   </style>
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Zeenath Events</a>
+      <a class="navbar-brand" href="events.html">Zeenath Events</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link active" href="events.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="packages.html">Packages</a>
@@ -51,56 +64,60 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="ratings.html">ratings</a>
-            <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Us</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  
 
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="contact-form">
-        <h2 class="contact-title text-center">Contact Us</h2>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="contact-form">
+          <h2 class="contact-title text-center">Contact Us</h2>
 
-        <!-- 📨 Formspree Contact Form -->
-        <form action="habibisaudi02@gmail.com" method="email">
-          <div class="mb-3">
-            <label for="name" class="form-label">Full Name</label>
-            <input type="text" name="name" class="form-control" id="name" placeholder="Enter your name" required />
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email Address</label>
-            <input type="email" name="email" class="form-control" id="email" placeholder="habibisaudi02@gmail.com" required />
-          </div>
-          <div class="mb-3">
-            <label for="subject" class="form-label">Subject</label>
-            <input type="text" name="subject" class="form-control" id="subject" placeholder="Subject" required />
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea name="message" class="form-control" id="message" rows="5" placeholder="Your message..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-custom w-100">Send Message</button>
-        </form>
-        <!-- End of Form -->
-        
+          <!-- 📨 Contact Form -->
+          <form action="mailto:habibisaudi02@gmail.com" method="POST" enctype="text/plain">
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" name="name" class="form-control" id="name" placeholder="Enter your name" required />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email" required />
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" name="subject" class="form-control" id="subject" placeholder="Subject" required />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea name="message" class="form-control" id="message" rows="5" placeholder="Your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-custom w-100 mb-3">Send Message</button>
+          </form>
+
+          <!-- 💬 WhatsApp Chat Button -->
+          <a href="https://wa.me/918121446011?text=Hello%20there!" target="_blank" class="btn btn-whatsapp w-100">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+            Chat with us on WhatsApp
+          </a>
+
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- Footer -->
-<footer class="bg-dark text-white text-center py-4 mt-5">
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
     <div class="container">
-        <p class="mb-0">&copy; 2025 Zeenath Event Management. All rights reserved.</p>
+      <p class="mb-0">&copy; 2025 Zeenath Event Management. All rights reserved.</p>
     </div>
-</footer>
+  </footer>
 
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
