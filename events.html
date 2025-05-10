@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zeenath Event Management</title>
+  <link rel="icon" href="favicon-16x16.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="ff.css">
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eaeceb; /* Soft blue-gray for whole page */
+    }
+
+    .container-custom {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #fcfcfc; /* White for main welcome card */
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card {
+      background-color: lch(78.93% 1.76 134.7 / 0.87); /* Light pink for cards */
+      border: 1px solid #FBF3C1;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(158, 78, 78, 0.08);
+    }
+
+    .card-body {
+      background-color: #FBF3C1; /* Very light pink for inner body */
+      padding: 20px;
+      border-radius: 10px;
+    }
+    
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-body {
+      background-color: #FBF3C1;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .rating-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: row-reverse;
+    }
+
+    .rating-container input {
+      display: none;
+    }
+
+    .rating-container label {
+      font-size: 30px;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .rating-container input:checked ~ label,
+    .rating-container label:hover,
+    .rating-container label:hover ~ label {
+      color: #ffcc00;
+    }
+
+    .average-rating {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .rating-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 50px;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+    }
+
+    
+
+    /* Event Videos Section Card Background Color */
+    .video-card-1 {
+      background-color: #e3f2fd; /* Light Blue for Wedding Highlights */
+      border: 1px solid #bbdefb;
+    }
+
+    .video-card-2 {
+      background-color: #fff8e1; /* Light Yellow for Birthday Party Moments */
+      border: 1px solid #fff59d;
+    }
+
+    .video-card-3 {
+      background-color: #c8e6c9; /* Light Green for Freshers Party Vibe */
+      border: 1px solid #a5d6a7;
+    }
+
+    /* Event Packages Section Card Background Color */
+    .package-card-1 {
+      background-color: #ffe0b2; /* Light Orange for Wedding Celebration */
+      border: 1px solid #ffcc80;
+    }
+
+    .package-card-2 {
+      background-color: #f8bbd0; /* Light Pink for Birthday Bash */
+      border: 1px solid #f48fb1;
+    }
+
+    .package-card-3 {
+      background-color: #b2dfdb; /* Light Teal for Freshers Party */
+      border: 1px solid #80cbc4;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="events.html">Zeenath Events</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="events.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="packages.html">Packages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="event.html">events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ratings.html">ratings</a>
+            <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+ 
+  <!-- Full-screen Background Video -->
+  <video autoplay muted loop  width="100%">
+    <source src="Zeenath.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+<!-- Event Videos Section -->
+<div class="video-section">
+  <div class="container">
+    <h3 class="text-center mb-4">Our Events</h3>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card h-100 video-card">
+          <div class="ratio ratio-16x9">
+            <video src="istockphoto-1223155118-640_adpp_is.mp4" autoplay loop muted></video>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><a href="event.html">Wedding Highlights</a></h5>
+            <p class="card-text">A glimpse into one of our beautifully organized weddings.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card h-100 video-card">
+          <div class="ratio ratio-16x9">
+            <video src="Zeba Fatima.mp4" autoplay loop muted></video>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><a href="event.html">Birthday Party Moments</a></h5>
+            <p class="card-text">Capturing fun and joy from our recent birthday events.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card h-100 video-card">
+          <div class="ratio ratio-16x9"><video src="4916813-hd_1920_1080_30fps (1).mp4" autoplay loop muted></video>
+          </div>
+            <a href=""></a>
+          <div class="card-body">
+            <h5 class="card-title"><a href="event.html">Freshers Party Vibe</a></h5>
+            <p class="card-text">Exciting highlights from a fun-filled freshers' event.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <br>
+
+<!-- Event Packages Section -->
+<div class="packages-section">
+  <div class="container">
+    <h3 class="text-center mb-4">Event Packages</h3>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card h-100 package-card">
+          <div class="card-body">
+            <h5 class="card-title"><a href="packages.html">Wedding Celebration<</a>/h5>
+            <p class="card-text">Elegant weddings with floral decor, live music, and fine dining.</p>
+            <p><strong>Price:</strong> ₹99,000</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card h-100 package-card">
+          <div class="card-body">
+            <h5 class="card-title"><a href="packages.html">Birthday Bash</a></h5>
+            <p class="card-text">Thyemed decor, games, and cake cutting. Fun for all ages!</p>
+            <p><strong>Price:</strong> ₹15,000</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card h-100 package-card">
+          <div class="card-body">
+            <h5 class="card-title"><a href="packages.html">Freshers Party</a></h5>
+            <p class="card-text">Lively party with energetic performances and trendy decor.</p>
+            <p><strong>Price:</strong> ₹35,000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  <!-- Welcome Section -->
+  <div class="container-custom">
+    <h2 class="text-center mb-4">Welcome to Zeenath Event Management</h2>
+
+    <!-- Rating Card -->
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title text-center mb-4">Rate Our Events</h4>
+
+        <div class="rating-container mb-3 text-center">
+          <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+          <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+          <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+          <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+          <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+        </div>
+
+        <div class="text-center">
+          <button class="btn btn-primary" onclick="submitRating()">Submit Rating</button>
+        </div>
+        <div class="text-center mt-2">
+          <button class="btn btn-secondary" onclick="undoRating()">Undo Last Rating</button>
+        </div>
+
+        <div class="result mt-4 text-center">
+          <p>Average Rating: <span id="average-rating" class="average-rating">0</span> / 5</p>
+          <ul id="rating-list" class="rating-list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Zeenath Event Management. All rights reserved.</p>
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Rating Script -->
+  <script>
+    let ratings = [];
+
+    function submitRating() {
+      const rating = document.querySelector('input[name="rating"]:checked');
+      if (!rating) {
+        alert("Please select a rating.");
+        return;
+      }
+
+      const ratingValue = parseInt(rating.value);
+      ratings.push({ rating: ratingValue });
+
+      displayRatings();
+      calculateAverageRating();
+
+      document.querySelector('input[name="rating"]:checked').checked = false;
+    }
+
+    function undoRating() {
+      if (ratings.length === 0) {
+        alert("No ratings to undo.");
+        return;
+      }
+
+      ratings.pop();
+      displayRatings();
+      calculateAverageRating();
+    }
+
+    function calculateAverageRating() {
+      if (ratings.length === 0) {
+        document.getElementById('average-rating').innerText = "0";
+        return;
+      }
+
+      const total = ratings.reduce((sum, entry) => sum + entry.rating, 0);
+      const average = total / ratings.length;
+      document.getElementById('average-rating').innerText = average.toFixed(2);
+    }
+
+    function displayRatings() {
+      const ratingList = document.getElementById('rating-list');
+      ratingList.innerHTML = '';
+
+      ratings.forEach((entry) => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<strong>Rating:</strong> ${entry.rating} ★<hr>`;
+        ratingList.appendChild(listItem);
+      });
+    }
+  </script>
+
+</body>
+</html>

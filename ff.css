@@ -1,0 +1,12 @@
+/* Event Videos Section Card Background Color */
+.video-card {
+    background-color: #f0f8ff; /* Light blue background for videos */
+    border: 1px solid #117ddb; /* Light blue border for a soft look */
+  }
+  
+  /* Event Packages Section Card Background Color */
+  .package-card {
+    background-color: #e08713; /* Light peach background for event packages */
+    border: 1px solid #ffd6a5; /* Soft peach border */
+  }
+  
